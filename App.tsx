@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text } from 'react-native';
+import Routes from './src/navigation/routes';
 
 function App(): JSX.Element {
-  return <Text>Cestou</Text>;
+  return <Routes />;
 }
 
 export default App;
