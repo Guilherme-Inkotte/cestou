@@ -7,7 +7,7 @@ export const createStyles = ({ theme }: DefaultStyleProps) =>
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '#000',
+      backgroundColor: theme?.colors.background,
     },
     imageContainer: {
       height: '100%',
@@ -23,9 +23,6 @@ export const createStyles = ({ theme }: DefaultStyleProps) =>
       marginBottom: 4,
     },
     divider: {
-      height: 1,
-      width: '100%',
-      backgroundColor: theme.colors.primary,
       marginVertical: 16,
     },
     button: {

@@ -9,7 +9,9 @@ const defaultTheme = {
   colors: {
     ...DefaultTheme.colors,
     primary: 'rgb(255, 94, 5)',
+    primaryTransparent: 'rgba(255, 94, 5, 0)',
     background: 'rgb(30, 30, 30)',
+    backgroundDimmed: 'rgba(30, 30, 30, 0.3)',
     positive: 'rgb(255, 255, 255)',
     divider: 'rgba(255, 255, 255, 0.3)',
     text: 'rgb(255, 255, 255)',
