@@ -3,7 +3,7 @@ import { ImageBackground, StatusBar, View } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { useNavigation, useTheme } from '@react-navigation/native';
 
-import { WelcomeScreenProps } from '../../navigation/types';
+import { ScreenNames, WelcomeScreenProps } from '../../navigation/types';
 
 import { createStyles } from './styles';
 import { Button, Divider, Text } from '../../components';
@@ -37,7 +37,7 @@ const Welcome: React.FC<WelcomeScreenProps> = () => {
           <Button
             customStyle={styles.button}
             label="Sim, quero me cadastrar"
-            onPress={() => navigation.navigate('Signup')}
+            onPress={() => navigation.navigate(ScreenNames.SignupAccessInfo)}
           />
           <Button
             type="secondary"

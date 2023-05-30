@@ -2,13 +2,15 @@ import { StackScreenProps } from '@react-navigation/stack';
 
 export enum ScreenNames {
   Welcome = 'Welcome',
-  Signup = 'Signup',
+  SignupAccessInfo = 'SignupAccessInfo',
+  SignupPlayerInfo = 'SignupPlayerInfo',
 }
 
 // Auth Stack
 export type AuthStackParamList = {
   Welcome: undefined;
-  Signup: undefined;
+  SignupAccessInfo: undefined;
+  SignupPlayerInfo: undefined;
 };
 
 export type WelcomeScreenProps = StackScreenProps<
@@ -16,7 +18,12 @@ export type WelcomeScreenProps = StackScreenProps<
   ScreenNames.Welcome
 >;
 
-export type SignupScreenProps = StackScreenProps<
+export type SignupAccessInfoScreenProps = StackScreenProps<
   AuthStackParamList,
-  ScreenNames.Signup
+  ScreenNames.SignupAccessInfo
+>;
+
+export type SignupPlayerInfoScreenProps = StackScreenProps<
+  AuthStackParamList,
+  ScreenNames.SignupPlayerInfo
 >;

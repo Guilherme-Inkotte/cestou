@@ -1,6 +1,11 @@
 import { TextStyle } from 'react-native/types';
 
-export type Typography = 'header' | 'paragraph' | 'buttonLabel';
+export type Typography =
+  | 'header'
+  | 'paragraph'
+  | 'buttonLabel'
+  | 'inputLabel'
+  | 'input';
 
 export const typography: Record<Typography, TextStyle> = {
   header: {
@@ -17,5 +22,14 @@ export const typography: Record<Typography, TextStyle> = {
     fontSize: 16,
     lineHeight: 20,
     fontWeight: '500',
+  },
+  inputLabel: {
+    fontSize: 16,
+    lineHeight: 20,
+    fontWeight: '500',
+  },
+  input: {
+    fontSize: 16,
+    lineHeight: 20,
   },
 };

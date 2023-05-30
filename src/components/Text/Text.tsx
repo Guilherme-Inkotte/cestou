@@ -5,7 +5,7 @@ import { TextProps } from './types';
 import { useTheme } from '@react-navigation/native';
 
 const Text: React.FC<TextProps> = ({
-  type = 'buttonLabel',
+  type = 'paragraph',
   customStyle,
   children,
 }) => {

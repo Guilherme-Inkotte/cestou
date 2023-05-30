@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   const styles = createStyles({ theme, type });
   return (
     <TouchableOpacity style={[styles.container, customStyle]} onPress={onPress}>
-      <Text>{label}</Text>
+      <Text type="buttonLabel">{label}</Text>
     </TouchableOpacity>
   );
 };

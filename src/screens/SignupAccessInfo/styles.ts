@@ -11,5 +11,14 @@ export const createStyles = ({ theme, top }: DefaultStyleProps) => {
       padding: 24,
       paddingTop: 24 + top!,
     },
+    divider: {
+      marginVertical: 12,
+    },
+    subtitle: {
+      marginBottom: 20,
+    },
+    inputContainer: {
+      marginBottom: 20,
+    },
   });
 };

@@ -16,6 +16,7 @@ const defaultTheme = {
     divider: 'rgba(255, 255, 255, 0.3)',
     text: 'rgb(255, 255, 255)',
     textNegative: 'rgb(30, 30, 30)',
+    placeholder: 'rgba(255, 255, 255, 0.8)',
   },
 };
 

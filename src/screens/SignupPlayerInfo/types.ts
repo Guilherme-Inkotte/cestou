@@ -1,5 +1,5 @@
 import { DefaultStyleProps } from '../../types/default';
 
-export type SignupStyleProps = {
+export type SignupPlayerStyleProps = {
   top: number;
 } & DefaultStyleProps;
