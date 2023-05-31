@@ -5,7 +5,9 @@ export type Typography =
   | 'paragraph'
   | 'buttonLabel'
   | 'inputLabel'
-  | 'input';
+  | 'input'
+  | 'statLabel'
+  | 'statValue';
 
 export const typography: Record<Typography, TextStyle> = {
   header: {
@@ -31,5 +33,15 @@ export const typography: Record<Typography, TextStyle> = {
   input: {
     fontSize: 16,
     lineHeight: 20,
+  },
+  statLabel: {
+    fontSize: 14,
+    lineHeight: 18,
+    fontWeight: '300',
+  },
+  statValue: {
+    fontSize: 16,
+    lineHeight: 18,
+    fontWeight: '500',
   },
 };

@@ -1,6 +1,9 @@
 import { StackScreenProps } from '@react-navigation/stack';
 
 export enum ScreenNames {
+  AuthStack = 'AuthStack',
+  MainStack = 'MainStack',
+  Home = 'Home',
   Welcome = 'Welcome',
   SignupAccessInfo = 'SignupAccessInfo',
   SignupPlayerInfo = 'SignupPlayerInfo',
@@ -26,4 +29,14 @@ export type SignupAccessInfoScreenProps = StackScreenProps<
 export type SignupPlayerInfoScreenProps = StackScreenProps<
   AuthStackParamList,
   ScreenNames.SignupPlayerInfo
+>;
+
+// Main Stack
+export type MainStackParamList = {
+  Home: undefined;
+};
+
+export type HomeScreenProps = StackScreenProps<
+  MainStackParamList,
+  ScreenNames.Home
 >;

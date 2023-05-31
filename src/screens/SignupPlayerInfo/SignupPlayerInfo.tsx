@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { ScrollView, View } from 'react-native';
-import { useTheme } from '@react-navigation/native';
+import { Alert, ScrollView, View } from 'react-native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 
-import { SignupPlayerInfoScreenProps } from '../../navigation/types';
+import {
+  ScreenNames,
+  SignupPlayerInfoScreenProps,
+} from '../../navigation/types';
 
 import { createStyles } from './styles';
 import { Button, Divider, Input, Text } from '../../components';
@@ -11,6 +14,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Roles } from '../../types/user';
 
 const SignupAccessInfoScreen: React.FC<SignupPlayerInfoScreenProps> = () => {
+  const { replace } =
+    useNavigation<SignupPlayerInfoScreenProps['navigation']>();
   const { top } = useSafeAreaInsets();
   const theme = useTheme();
   const styles = createStyles({ theme, top });
@@ -25,6 +30,26 @@ const SignupAccessInfoScreen: React.FC<SignupPlayerInfoScreenProps> = () => {
     shootingGuard: false,
   });
   const [favoriteTeam, setFavoriteTeam] = useState('');
+
+  const handleSubmit = () => {
+    // if (
+    //   !height ||
+    //   !weight ||
+    //   !mainHand ||
+    //   (!roles.center &&
+    //     !roles.powerForward &&
+    //     !roles.smallForward &&
+    //     !roles.pointGuard &&
+    //     !roles.shootingGuard)
+    // ) {
+    //   return Alert.alert(
+    //     'Campos obrigatórios',
+    //     'Por favor, preencha todos os campos antes de finalizar.',
+    //   );
+    // }
+
+    replace(ScreenNames.MainStack, { screen: 'Home' });
+  };
 
   return (
     <ScrollView
@@ -134,7 +159,7 @@ const SignupAccessInfoScreen: React.FC<SignupPlayerInfoScreenProps> = () => {
           <Text>Armador (PG)</Text>
         </TouchableOpacity>
       </View>
-      <Button label="Finalizar" onPress={() => {}} />
+      <Button label="Finalizar" onPress={handleSubmit} />
     </ScrollView>
   );
 };

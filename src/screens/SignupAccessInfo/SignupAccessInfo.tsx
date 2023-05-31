@@ -24,12 +24,12 @@ const SignupAccessInfo: React.FC<SignupAccessInfoScreenProps> = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleContinue = () => {
-    if (!nickname || !email || !phone || !password || !confirmPassword) {
-      return Alert.alert(
-        'Campos obrigatórios',
-        'Por favor, preencha todos os campos antes de prosseguir',
-      );
-    }
+    // if (!nickname || !email || !phone || !password || !confirmPassword) {
+    //   return Alert.alert(
+    //     'Campos obrigatórios',
+    //     'Por favor, preencha todos os campos antes de prosseguir',
+    //   );
+    // }
     navigate(ScreenNames.SignupPlayerInfo);
   };
 

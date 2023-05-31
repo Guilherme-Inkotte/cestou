@@ -8,10 +8,15 @@ const Text: React.FC<TextProps> = ({
   type = 'paragraph',
   customStyle,
   children,
+  ...props
 }) => {
   const theme = useTheme();
   const styles = createStyles({ theme, type });
-  return <RNText style={[styles.container, customStyle]}>{children}</RNText>;
+  return (
+    <RNText {...props} style={[styles.container, customStyle]}>
+      {children}
+    </RNText>
+  );
 };
 
 export default Text;

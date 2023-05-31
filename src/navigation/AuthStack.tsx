@@ -5,9 +5,9 @@ import {
   SignupPlayerInfoScreen,
   Welcome,
 } from '../screens';
-import { ScreenNames } from './types';
+import { AuthStackParamList, ScreenNames } from './types';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<AuthStackParamList>();
 
 const AuthStack = () => {
   return (
