@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView } from 'react-native';
+import { Alert, ScrollView } from 'react-native';
 import { useNavigation, useTheme } from '@react-navigation/native';
 
 import {
@@ -23,6 +23,16 @@ const SignupAccessInfo: React.FC<SignupAccessInfoScreenProps> = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
+  const handleContinue = () => {
+    if (!nickname || !email || !phone || !password || !confirmPassword) {
+      return Alert.alert(
+        'Campos obrigatórios',
+        'Por favor, preencha todos os campos antes de prosseguir',
+      );
+    }
+    navigate(ScreenNames.SignupPlayerInfo);
+  };
+
   return (
     <ScrollView
       style={styles.container}
@@ -44,6 +54,9 @@ const SignupAccessInfo: React.FC<SignupAccessInfoScreenProps> = () => {
         value={email}
         onChangeText={setEmail}
         placeholder="Digite seu e-mail"
+        keyboardType="email-address"
+        textContentType="emailAddress"
+        autoCapitalize="none"
         customContainerStyle={styles.inputContainer}
       />
       <Input
@@ -67,12 +80,11 @@ const SignupAccessInfo: React.FC<SignupAccessInfoScreenProps> = () => {
         value={phone}
         onChangeText={setPhone}
         placeholder="(00) 99999-9999"
+        keyboardType="phone-pad"
+        textContentType="telephoneNumber"
         customContainerStyle={styles.inputContainer}
       />
-      <Button
-        label="Continuar"
-        onPress={() => navigate(ScreenNames.SignupPlayerInfo)}
-      />
+      <Button label="Continuar" onPress={handleContinue} />
     </ScrollView>
   );
 };

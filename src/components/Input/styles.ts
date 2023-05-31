@@ -15,7 +15,7 @@ export const createStyles = ({ theme }: InputStyleProps) => {
       borderColor: theme?.colors.positive,
       borderRadius: 8,
       borderWidth: 1,
-      padding: 12,
+      paddingHorizontal: 12,
       color: theme?.colors.text,
       ...theme?.typography.input,
     },
