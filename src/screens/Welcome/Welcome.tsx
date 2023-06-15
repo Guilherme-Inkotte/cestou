@@ -17,6 +17,7 @@ const Welcome: React.FC<WelcomeScreenProps> = () => {
 
   return (
     <View style={styles.container}>
+      <StatusBar translucent backgroundColor="transparent" />
       <ImageBackground
         style={styles.imageContainer}
         source={require('../../assets/images/welcome-background.jpeg')}>
